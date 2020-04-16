@@ -63,6 +63,7 @@
 							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-smile.jpg)');}, 1000);
 							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-open1.jpg)');}, 1400);
 							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-open3.jpg)');}, 2000);
+							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-open2.jpg)');}, 2000);
 							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-smile.jpg)');}, 3000);
 						}
 					});
@@ -75,13 +76,12 @@
 					//});
 								var audio = {};
 								audio["walk"] = new Audio();
-								audio["walk"].src = "./img/nothing.mp3"
+								audio["walk"].src = "./audio/nothing.mp3"
 								audio["walk"].play();
 								
 								$('#pics').css('background-image', 'url(img/zoombot-open1.jpg)');
 							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-smile.jpg)');}, 1000);
 							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-open1.jpg)');}, 1400);
-							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-open3.jpg)');}, 2000);
 							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-smile.jpg)');}, 3000);
 						}
 					});
@@ -92,13 +92,31 @@
 							//zoombot.say("I am fine Thank you");
 							var audio = {};
 								audio["walk"] = new Audio();
-								audio["walk"].src = "./img/fine.mp3"
+								audio["walk"].src = "./audio/fine.mp3"
 								audio["walk"].play();
 								
 								$('#pics').css('background-image', 'url(img/zoombot-open1.jpg)');
 							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-smile.jpg)');}, 1000);
 							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-open1.jpg)');}, 1400);
 							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-open3.jpg)');}, 2000);
+							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-smile.jpg)');}, 3000);
+						}
+					});
+					
+					//kya mujhe Sun sakte ho, URDU
+					
+					zoombot.on(['kya mujhe Sun sakte ho','kya app Sun sakte ho']).then((i) => {
+						if(audioOn){
+							//zoombot.say("I am fine Thank you");
+							var audio = {};
+								audio["walk"] = new Audio();
+								audio["walk"].src = "./audio/listn.mp3"
+								audio["walk"].play();
+								
+								$('#pics').css('background-image', 'url(img/zoombot-open1.jpg)');
+							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-thinking.jpg)');}, 1000);
+							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-open1.jpg)');}, 1400);
+							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-open2.jpg)');}, 2000);
 							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-smile.jpg)');}, 3000);
 						}
 					});
