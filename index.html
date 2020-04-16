@@ -44,7 +44,8 @@
 					const zoombot = new Artyom();
 
 					// If you prefer a female voice uncomment the next line of things
-					// zoombot.ArtyomVoicesIdentifiers["en-GB"] = ["Google UK English Female", "Google UK English Male", "en-GB", "en_GB"];
+				 //zoombot.ArtyomVoicesIdentifiers["en-GB"] = ["Google UK English Female", "Google UK English Male", "en-GB", "en_GB"];
+				
 
 					// initialize in off state
 					var audioOn = false;
@@ -57,7 +58,7 @@
 						} else {
 							$(this).text('TURN OFF ZOOMBOT');
 							audioOn = true;
-							zoombot.say("hi guys. matt here. my video is a little choppy sorry. how is everyone today?");
+							zoombot.say("hi guys. Jahanzeb here. how is everyone today?");
 							$('#pics').css('background-image', 'url(img/zoombot-open1.jpg)');
 							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-smile.jpg)');}, 1000);
 							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-open1.jpg)');}, 1400);
@@ -65,11 +66,47 @@
 							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-smile.jpg)');}, 3000);
 						}
 					});
-
+					
+					// kya ho raha hai, URDU
+					zoombot.on(['kya ho raha hai','kiya ho raha hay']).then((i) => {
+						if(audioOn){
+						//	zoombot.say("कुछ खास नहीं", {
+					//	lang:"hi-IN"
+					//});
+								var audio = {};
+								audio["walk"] = new Audio();
+								audio["walk"].src = "./img/nothing.mp3"
+								audio["walk"].play();
+								
+								$('#pics').css('background-image', 'url(img/zoombot-open1.jpg)');
+							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-smile.jpg)');}, 1000);
+							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-open1.jpg)');}, 1400);
+							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-open3.jpg)');}, 2000);
+							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-smile.jpg)');}, 3000);
+						}
+					});
+					
+					// Aap kesy ho , URDU
+					zoombot.on(['aap kaise ho','aap kesy ho']).then((i) => {
+						if(audioOn){
+							//zoombot.say("I am fine Thank you");
+							var audio = {};
+								audio["walk"] = new Audio();
+								audio["walk"].src = "./img/fine.mp3"
+								audio["walk"].play();
+								
+								$('#pics').css('background-image', 'url(img/zoombot-open1.jpg)');
+							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-smile.jpg)');}, 1000);
+							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-open1.jpg)');}, 1400);
+							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-open3.jpg)');}, 2000);
+							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-smile.jpg)');}, 3000);
+						}
+					});
+					
 					// Hello
 					zoombot.on(['hello', 'good morning']).then((i) => {
 						if(audioOn){
-							zoombot.say("hi guys. matt here. my video is a little choppy sorry. how is everyone today?");
+							zoombot.say("hi guys. Jahan here. my video is a little choppy sorry.");
 							$('#pics').css('background-image', 'url(img/zoombot-open1.jpg)');
 							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-smile.jpg)');}, 1000);
 							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-open1.jpg)');}, 1400);
@@ -160,9 +197,9 @@
 					});
 
 					// Day drinking
-					zoombot.on(['drinking']).then((i) => {
+					zoombot.on(['whats going on']).then((i) => {
 						if(audioOn){
-							zoombot.say("is it too. early for red wine? ha ha ha ha ha ha ha ha ha.");
+							zoombot.say("Nice Joke. ha ha ha ha ha ha ha ha ha.");
 							$('#pics').css('background-image', 'url(img/zoombot-open1.jpg)');
 							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-smile.jpg)');}, 1000);
 							setTimeout(function(){$('#pics').css('background-image', 'url(img/zoombot-open1.jpg)');}, 1400);
@@ -187,7 +224,7 @@
 
 					// Kickstart my heart
 					zoombot.initialize({
-					    lang: "en-GB", // GreatBritain english
+					    lang:"en-US", // US english //"en-GB", //Great Britain English
 					    continuous: true, // Listen forever
 					    soundex: true,// Use the soundex algorithm to increase accuracy
 					    debug: true, // Show messages in the console
