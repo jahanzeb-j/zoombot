@@ -1,13 +1,20 @@
 # Zoombot 2.0
-- Bot can speak Urdu / Hindi
-- For your own voice please replace the audio (mp3) files.
-- Watch Video: 
+
+- Bot can speak Urdu / Hindi, Chinese also.
+  - Urdu: Aap kesy ho, kya ho rha hy? , Kia mjhy sun skty hen?,
+  - Chinese : 你好, 你好吗 ,
+  - Hindi : "क्या हाल है?", "क्या हलचल है?".
+- Change language from top language selection button.
+- For your own voice replace the audio (mp3) files.
+- Watch Video:
+  - https://youtu.be/78y1yamRTA8
 
 # Zoombot
+
 A highly advanced AI to handle all those Zoom calls so you can live your life in peace. WARNING: Everything about this project is shitty other than Artyom.js (which was actually coded by someone who knows what they're doing) so I take no responsibility for not preloading the images, not creating a local https server, and using some random old ass version of jQuery. Sorry for the nightmares but hey, this thing actually works so have fun! If you want to learn a little more about Zoombot I wrote this too https://redpepper.land/blog/zoombot/
 
-
 ## Setup
+
 - Replace the images in /img with your pics
 - Put all these files on a server running https:// otherwise Chrome throws security errors and can't access your microphone.
 - Visit your Zoombot https:// URL in Chrome
@@ -17,7 +24,7 @@ A highly advanced AI to handle all those Zoom calls so you can live your life in
 - Turn up your speakers
 - Talk to your Zoombot <3
 
-
 ## Credits
+
 Special thanks to Carlos Delgado for making Artyom.js which powers the listening and speaking parts of this project. He's good https://github.com/sdkcarlos/artyom.js/
-and Whole Credit goes to matt https://github.com/mcreed/zoombot ;  https://redpepper.land/blog/zoombot/
+and Whole Credit goes to matt https://github.com/mcreed/zoombot ; https://redpepper.land/blog/zoombot/
